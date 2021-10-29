@@ -38,8 +38,27 @@ public:
         //    }
         //}
 
-        // 理解后写法
+        // 理解后写法 将后面的k个元素移动到前面
+        int size = nums.size();
+        while (k > size)
+        {
+            k -= size;
+        }
 
+        vector<int> result(nums.size(), 0);
+
+        int index = 0;
+        for (size_t i = size - k; i < size; i++, index++)
+        {
+            result[index] = nums[i];
+        }
+
+        for (size_t i = 0; i < size - k; i++, index++)
+        {
+            result[index] = nums[i];
+        }
+
+        nums = result;
     }
 };
 
