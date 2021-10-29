@@ -66,8 +66,30 @@ public:
         std::reverse(result.begin(), result.end());
 
         return result;
+
     }
 };
+
+//膜拜写法
+//class Solution {
+//public:
+//    vector<int> sortedSquares(vector<int>& nums) {
+//        int n = nums.size() - 1;
+//        vector<int> res(nums.size(), 0);
+//        for (int left = 0, right = nums.size() - 1; left <= right;) {
+//            if (nums[left] * nums[left] < nums[right] * nums[right]) {
+//                res[n--] = nums[right] * nums[right];
+//                right--;
+//            }
+//            else {
+//                res[n--] = nums[left] * nums[left];
+//                left++;
+//            }
+//        }
+//        return res;
+//
+//    }
+//};
 
 int main()
 {
