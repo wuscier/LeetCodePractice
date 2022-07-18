@@ -1,0 +1,40 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        // for(int i=0;i<nums.size();i++){
+        //     if(nums[i] == target){
+        //         return i;
+        //     }
+        // }
+
+        // return -1;
+
+        int first = nums.front();
+        int last = nums.end();
+
+        int middle = nums.size()/2;
+        while(true){
+            int left = middle - 1;
+            int right = middle + 1;
+            if(left <0 || right >=nums.size()){
+                break;
+            }
+
+            if(nums[middle]>nums[left] && nums[middle]>nums[right]){
+                break;
+            }
+
+            if(nums[middle]<nums[left] && nums[middle]<nums[right]){
+                break;
+            }
+
+            if(nums[left] < nums[middle] && nums[middle] < nums[right]){
+
+            }
+
+            if(nums[left] > nums[middle] && nums[middle] > nums[right]){
+                
+            }
+        }
+    }
+};
